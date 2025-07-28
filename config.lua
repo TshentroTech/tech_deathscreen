@@ -103,7 +103,7 @@ Config.DeathCamera = {
 -- Discord Webhook Configuration
 Config.Discord = {
     enabled = true, -- Enable Discord webhook logging
-    webhookUrl = "https://discord.com/api/webhooks/1386831629707903057/3B1V7w2tvyLN4mtxlPPUFsBfhnRTThdcaZ6D-9aXhnVx-aJp-xuojl4xE0-DAfrlpy_5", -- Your Discord webhook URL (leave empty to disable)
+    webhookUrl = "Your Discord webhook URL", -- Your Discord webhook URL (leave empty to disable)
     botName = "Death Screen Logger", -- Bot name for webhook messages
     botAvatar = "", -- Bot avatar URL (optional)
     logDeaths = true, -- Log player deaths
