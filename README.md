@@ -60,3 +60,4 @@ If you encounter any issues, please open an issue or contact me on the Cfx.re fo
 
 - Script by tshentro.tech
 - For more resources, visit [TshentroTech.tebex.io](https://TshentroTech.tebex.io) 
+- For more review, visit [youtube](https://youtu.be/3U8Oq5YbyuQ?si=1486BCLKQfj5TtSu) 
