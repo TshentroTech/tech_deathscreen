@@ -15,10 +15,10 @@ A FiveM script that adds a custom death screen effect for players, including a h
 ## Installation
 
 1. Download or clone this repository.
-2. Place the `deathscreen` folder in your server's `resources` directory.
+2. Place the `tech_deathscreen` folder in your server's `resources` directory.
 3. Add the following line to your `server.cfg`:
    ```
-   ensure deathscreen
+   ensure tech_deathscreen
    ```
 4. (Optional) Edit `config.lua` to customize settings.
 
