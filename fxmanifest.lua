@@ -3,7 +3,7 @@ game 'gta5'
 
 version '2.0.0'
 author 'tshentro.tech'
-name 'tech-deathscreen'
+name 'tech_deathscreen'
 description 'Thank you for your purchase TshentroTech.tebex.io'
 
 lua54 'yes'
