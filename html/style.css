@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: transparent;
+    overflow: hidden;
+    user-select: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Ensure death screen is hidden by default */
+#death-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    z-index: 9999;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#death-container.show {
+    display: flex;
+}
+
+/* Background Effects */
+.background-pulse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 0, 0, 0.1) 0%, transparent 70%);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.vignette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+/* Heart Monitor */
+.heart-monitor {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 400px;
+    height: 200px;
+    background: #111;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.monitor-screen {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ecg-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    transform: translateY(-50%);
+}
+
+.ecg-svg {
+    width: 100%;
+    height: 100%;
+}
+
+#ecg-path {
+    filter: drop-shadow(0 0 5px #ff0000);
+    animation: ecg-sweep 2s linear infinite;
+}
+
+@keyframes ecg-sweep {
+    0% { stroke-dasharray: 0, 800; }
+    100% { stroke-dasharray: 800, 0; }
+}
+
+.heart-rate-display {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ff0000;
+    font-family: 'Orbitron', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.bpm {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* Death Message Container */
+.death-message-container {
+    text-align: center;
+    z-index: 10;
+    max-width: 80%;
+}
+
+.death-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ff0000;
+    text-shadow: 0 0 30px #ff0000, 0 0 60px #ff0000;
+    margin-bottom: 2rem;
+    animation: titlePulse 3s ease-in-out infinite;
+    letter-spacing: 0.2em;
+}
+
+@keyframes titlePulse {
+    0%, 100% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+.scrolling-message {
+    width: 100%;
+    overflow: hidden;
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    padding: 20px 0;
+    margin: 2rem 0;
+}
+
+#death-message {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 300;
+    white-space: nowrap;
+    animation: scroll 8s linear infinite;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Secret Message */
+.secret-message {
+    margin-top: 3rem;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #444;
+    border-radius: 10px;
+    opacity: 0;
+    animation: secretReveal 2s ease-in-out forwards;
+}
+
+@keyframes secretReveal {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#secret-text {
+    color: #ffd700;
+    font-style: italic;
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Death Information */
+.death-info {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+.death-reason, .death-timer {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.respawn-options {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hospital-btn, .emergency-btn {
+    padding: 15px 30px;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.hospital-btn {
+    background: rgba(0, 150, 255, 0.2);
+    border-color: #0096ff;
+    color: #0096ff;
+}
+
+.hospital-btn:hover {
+    background: rgba(0, 150, 255, 0.4);
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.5);
+    transform: scale(1.05);
+}
+
+/* STRONG PROTECTION: Disabled hospital button styles */
+.hospital-btn.disabled {
+    background: rgba(100, 100, 100, 0.2) !important;
+    border-color: #666 !important;
+    color: #666 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    opacity: 0.5 !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.hospital-btn.disabled:hover {
+    background: rgba(100, 100, 100, 0.2) !important;
+    border-color: #666 !important;
+    color: #666 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Hospital countdown styling */
+#hospital-countdown {
+    font-weight: bold;
+    color: #ff6b6b;
+    text-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+    animation: countdownPulse 1s ease-in-out infinite;
+}
+
+@keyframes countdownPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.emergency-btn {
+    background: rgba(0, 255, 0, 0.2);
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+.emergency-btn:hover {
+    background: rgba(0, 255, 0, 0.4);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    transform: scale(1.05);
+}
+
+/* Medical Equipment Icons */
+.medical-equipment {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.equipment-icon {
+    font-size: 3rem;
+    opacity: 0.3;
+    animation: equipmentPulse 4s ease-in-out infinite;
+}
+
+.equipment-icon:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.equipment-icon:nth-child(3) {
+    animation-delay: 2s;
+}
+
+@keyframes equipmentPulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.2); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .death-title {
+        font-size: 2.5rem;
+    }
+    
+    #death-message {
+        font-size: 1.2rem;
+    }
+    
+    .heart-monitor {
+        width: 300px;
+        height: 150px;
+        top: 5%;
+        right: 5%;
+    }
+    
+    .respawn-options {
+        gap: 15px;
+    }
+    
+    .hospital-btn, .emergency-btn {
+        padding: 15px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .medical-equipment {
+        display: none;
+    }
+    
+    .secret-message {
+        margin: 2rem 1rem;
+        padding: 20px;
+    }
+    
+    #secret-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Critical State Animations */
+.critical-state .background-pulse {
+    animation: criticalPulse 1s ease-in-out infinite;
+}
+
+@keyframes criticalPulse {
+    0%, 100% { opacity: 0.5; background: radial-gradient(circle at center, rgba(255, 0, 0, 0.2) 0%, transparent 70%); }
+    50% { opacity: 1; background: radial-gradient(circle at center, rgba(255, 0, 0, 0.5) 0%, transparent 70%); }
+}
+
+.flatline #ecg-path {
+    animation: none;
+    stroke: #666;
+}
+
+.flatline .heart-rate-display {
+    color: #666;
+    text-shadow: none;
+}

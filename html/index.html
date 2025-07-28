@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Screen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <div id="death-container">
+        <!-- Background Effects -->
+        <div class="background-pulse"></div>
+        <div class="vignette"></div>
+        
+        <!-- Heart Monitor Section -->
+        <div class="heart-monitor">
+            <div class="monitor-screen">
+                <div class="ecg-line">
+                    <svg class="ecg-svg" viewBox="0 0 800 200">
+                        <path id="ecg-path" d="M0,100 L800,100" stroke="#ff0000" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                <div class="heart-rate-display">
+                    <span id="heart-rate">80</span>
+                    <span class="bpm">BPM</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Death Message Section -->
+        <div class="death-message-container">
+            <div class="main-message">
+                <h1 id="death-title" class="death-title">YOU ARE DEAD</h1>
+                <div class="scrolling-message">
+                    <p id="death-message">You are dead until the doctor comes...</p>
+                </div>
+            </div>
+            
+            <!-- Secret Message (Hidden Initially) -->
+            <div id="secret-message" class="secret-message hidden">
+                <p id="secret-text">The shadows whisper of ancient secrets...</p>
+            </div>
+        </div>
+
+        <!-- Death Information -->
+        <div class="death-info">
+            <div class="death-reason">
+                <span>Cause of Death: </span>
+                <span id="death-cause">Unknown</span>
+            </div>
+            <div class="death-timer">
+                <span>Time Remaining: </span>
+                <span id="death-time">05:00</span>
+            </div>
+            <div class="respawn-options">
+                <div id="hospital-button" class="hospital-btn disabled">Go to Hospital (Available in <span id="hospital-countdown">120</span>s)</div>
+                <div id="emergency-button" class="emergency-btn">Call Emergency Services</div>
+            </div>
+        </div>
+
+        <!-- Medical Equipment Icons -->
+        <div class="medical-equipment">
+            <div class="equipment-icon">⚕️</div>
+            <div class="equipment-icon">🏥</div>
+            <div class="equipment-icon">💉</div>
+        </div>
+    </div>
+
+    <!-- Heartbeat Audio -->
+    <audio id="heartbeat-audio" loop preload="auto" muted>
+        <source src="../sounds/heartbeat.wav" type="audio/wav">
+        <source src="sounds/heartbeat.wav" type="audio/wav">
+    </audio>
+    
+    <!-- Flatline Audio -->
+    <audio id="flatline-audio" preload="auto" muted>
+        <source src="../sounds/heartbeat.wav" type="audio/wav">
+        <source src="sounds/heartbeat.wav" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
