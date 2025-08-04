@@ -1,7 +1,7 @@
 # Deathscreen
 
 
-## [Download the latest version](https://github.com/TshentroTech/tech_deathscreen/releases)
+## [Download the latest version V3.0.0]([https://github.com/TshentroTech/tech_deathscreen/releases](https://github.com/TshentroTech/tech_deathscreen/releases/tag/V3.0.0))
 
 
 A FiveM script that adds a custom death screen effect for players, including a heartbeat sound, visual effects, and a drone-style death camera.
@@ -65,3 +65,4 @@ If you encounter any issues, please open an issue or contact me on the Cfx.re fo
 - Script by tshentro.tech
 - For more resources, visit [TshentroTech.tebex.io](https://TshentroTech.tebex.io) 
 - For more review, visit [youtube](https://youtu.be/3U8Oq5YbyuQ?si=1486BCLKQfj5TtSu) 
+
