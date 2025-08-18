@@ -1,4 +1,9 @@
 ## [Download the latest version V3.0.0](https://github.com/TshentroTech/tech_deathscreen/releases/tag/V3.0.0)
+## 🤝 **SUPPORT**
+
+- 💬 **Discord**: https://discord.gg/DWdM4h7xbj
+- 🛒 **Store**: [TshentroTech.tebex.io](https://tshentrotech-store.tebex.io/package/6981985)
+- 📚 **Documentation**: Full setup guides available soon
 
 
 # 🎮 Tech DeathScreen v3.0.0
@@ -220,3 +225,4 @@ Custom License - © 2025 TshentroTech. All rights reserved.
 **Thank you for choosing Tech DeathScreen! 🚀**
 
 *Experience the most professional death screen system available for FiveM QBCore servers.*
+
