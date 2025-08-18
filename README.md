@@ -2,7 +2,7 @@
 ## 🤝 **SUPPORT**
 
 - 💬 **Discord**: https://discord.gg/DWdM4h7xbj
-- 🛒 **Store**: [TshentroTech.tebex.io](https://tshentrotech-store.tebex.io/package/6981985)
+- 🛒 **Store**: [TshentroTech.tebex.io](https://tshentro.tebex.io/category/3058465)
 - 📚 **Documentation**: Full setup guides available soon
 
 
@@ -225,4 +225,5 @@ Custom License - © 2025 TshentroTech. All rights reserved.
 **Thank you for choosing Tech DeathScreen! 🚀**
 
 *Experience the most professional death screen system available for FiveM QBCore servers.*
+
 
