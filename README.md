@@ -1,4 +1,6 @@
 ## [Download the latest version V3.0.0](https://github.com/TshentroTech/tech_deathscreen/releases/tag/V3.0.0)
+
+## [Gang & Job Vehicle Restrictions for QBCore, ESX & QBOX FiveM Script 2026](https://www.youtube.com/watch?v=fJZcJUI5iKQ)
 ## 🤝 **SUPPORT**
 
 - 💬 **Discord**: https://discord.gg/DWdM4h7xbj
@@ -225,5 +227,6 @@ Custom License - © 2025 TshentroTech. All rights reserved.
 **Thank you for choosing Tech DeathScreen! 🚀**
 
 *Experience the most professional death screen system available for FiveM QBCore servers.*
+
 
 
