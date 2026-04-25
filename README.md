@@ -1,5 +1,10 @@
 ## [Download the latest version V3.0.0](https://github.com/TshentroTech/tech_deathscreen/releases/tag/V3.0.0)
 
+
+## MY TEBEX STORE
+# If you'd like to support me, you can simply buy anything from my store. Thank you from the bottom of my heart.
+# 👉 https://tshentro.tebex.io
+
 ## [Gang & Job Vehicle Restrictions for QBCore, ESX & QBOX FiveM Script 2026](https://www.youtube.com/watch?v=fJZcJUI5iKQ)
 ## 🤝 **SUPPORT**
 
